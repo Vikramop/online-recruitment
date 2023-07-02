@@ -85,10 +85,7 @@ const SignInButton = () => {
                       active && 'bg-stone-700/50 dark:bg-stone-200',
                       'inline-flex items-center gap-6 px-[34px] py-2 text-sm text-stone-400 dark:text-stone-500'
                     )}
-                  >
-                    <Cog8ToothIcon className="h-5 w-5 text-stone-400" />
-                    <span>Manage Account</span>
-                  </Link>
+                  ></Link>
                 )}
               </Menu.Item>
               <Menu.Item>
@@ -110,7 +107,7 @@ const SignInButton = () => {
         </Menu>
       ) : (
         <button
-          className="rounded-md border border-stone-300 px-3 py-1 text-sm dark:border-stone-600"
+          className="  black_btn px-3 py-1 text-sm dark:border-stone-600"
           onClick={() => signIn()}
         >
           Sign In
