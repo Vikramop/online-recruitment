@@ -7,18 +7,17 @@ import { Combobox, Transition } from '@headlessui/react';
 import { useState } from 'react';
 
 const page = () => {
-  const { data: session } = useSession({
-    required: true,
-    // onUnauthenticated() {
-    //   redirect('/signin?callbackUrl=/ScoutClient');
-    // },
-  });
+  // const { data: session } = useSession({
+  //   required: true,
+  //   onUnauthenticated() {
+  //     redirect('/signin?callbackUrl=/ScoutClient');
+  //   },
+  // });
   const [search, setSearch] = useState('');
-  console.log(search);
 
   return (
     <section className="py-24">
-      <div className="green_gradient justify-center text-center mb-10">
+      <div className="purple_gradient justify-center text-center mb-10">
         <h1> Scout Your Clients </h1>
       </div>
       <form className="flex items-center ml-10">
@@ -45,7 +44,7 @@ const page = () => {
             type="text"
             id="simple-search"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search"
+            placeholder="Search for your Clients"
             required
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -82,20 +81,20 @@ const page = () => {
                     item.country.toLowerCase().includes(search);
             })
             .map((item) => (
-              <div className="shadow-lg rounded-lg">
+              <div className="shadow-lg rounded-lg bg-gray-900">
                 <img className="rounded-t-lg" src="/assets/images/man.jpg" />
                 <div className="pl-5 flex" key={item.id}>
                   <div>
-                    <h2 className="text-3xl font-bold text-slate-700 mb-3">
+                    <h2 className="text-3xl font-bold text-purple-700 mb-3">
                       {item.first_name}
                     </h2>
-                    <h3 className="font-bold text-gray-700">{item.email}</h3>
-                    <h3 className="font-bold mb-2 text-xl text-slate-700">
+                    <h3 className="font-bold text-purple-300">{item.email}</h3>
+                    <h3 className="font-bold mb-2 text-xl text-purple-300">
                       {item.role}
                     </h3>
                   </div>
 
-                  <div className="ml-2  text-2xl font-bold">
+                  <div className="ml-2  text-2xl font-bold  text-purple-500">
                     <h3>{item.country}</h3>
                   </div>
                 </div>

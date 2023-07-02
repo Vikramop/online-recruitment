@@ -1,6 +1,7 @@
 import '@styles/globals.css';
 import Nav from '@components/nav';
 import Provider from '@components/Provider';
+import Footer from '@app/footer/page';
 
 export const metadata = {
   title: 'Scout',
@@ -18,6 +19,7 @@ const RootLayout = ({ children }) => (
         <Provider>
           <Nav />
           {children}
+          <Footer />
         </Provider>
       </main>
     </body>
