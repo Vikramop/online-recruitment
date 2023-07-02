@@ -12,8 +12,6 @@ const Nav = () => {
         <Link href="/">SCOUTS</Link>
       </p>
       <div className="sm:flex hidden">
-        {/* <Link className="outline_btn mr-1">Scout Client</Link> */}
-        {/* <div onclick={ScoutClient}>s</div> */}
         <SignInButton />
       </div>
     </nav>
