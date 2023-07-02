@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React from 'react';
-// import SignInButton from './SignInButton';
+import SignInButton from './SignInButton';
 
 const Nav = () => {
   return (
@@ -12,7 +12,9 @@ const Nav = () => {
         <Link href="/">SCOUTS</Link>
       </p>
       <p className="nav_p ">The One Stop Solution For HR'S!!</p>
-      <div className="sm:flex hidden">{/* <SignInButton /> */}</div>
+      <div className="sm:flex hidden">
+        <SignInButton />
+      </div>
     </nav>
   );
 };

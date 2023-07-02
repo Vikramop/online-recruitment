@@ -7,12 +7,9 @@ import { Combobox, Transition } from '@headlessui/react';
 import { useState } from 'react';
 
 const page = () => {
-  // const { data: session } = useSession({
-  //   required: true,
-  //   onUnauthenticated() {
-  //     redirect('/signin?callbackUrl=/ScoutClient');
-  //   },
-  // });
+  const { data: session } = useSession({
+    required: true,
+  });
   const [search, setSearch] = useState('');
 
   return (
